@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+
+*{
+    box-sizing: border-box;
+
+}
+
+
+main, header, nav, article, aside, footer{
+    border: 1px solid gray;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-areas: 
+    "h h h"
+    "n n n"
+    "a a as"
+    "f f f ";
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+
+}
+a{
+    grid-area: an;
+}
+article{
+    grid-area: a;
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+article div{
+    height: 400px;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+}
+.kozep{
+    text-align: center;
+}
+h2{
+    margin: 10px;
+    padding: 10px;
+}
+.jobb{
+    float: right;
+}
+.bal{
+    float: left;
+}
+img{
+    text-align: right;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+nav,a, ul{
+    font-weight: 50px;
+    font-size: large;
+    display: grid;
+    grid-column: 1fr 2fr 3fr 4fr 5fr;
+    grid-template-areas:"an an an an an";
+    text-decoration: none;
+    list-style-type: none;
+}
+
+p{
+    font-style: normal;
+    font-weight: 20px;
+    color:aqua;
+}
+aside ul li{
+    grid-template-columns: 1fr 1fr;
+    grid-row: 20px;;
+}
+
+
+@media screen and (max-width: 700px){
+    main{
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h h "
+        "n n "
+        "a a"
+        "as as"
+        "f f  ";
+    }
+    article{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (max-width: 600px){
+    main{
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "as"
+        "f";
+    }
+    article{
+        grid-template-columns:  1fr ;
+    }
+}
